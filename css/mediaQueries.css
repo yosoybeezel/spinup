@@ -1,0 +1,24 @@
+@media (min-width: 768px) {
+	.mainLeft,
+	.mainRight{
+		height:calc(100% - 90px);
+	}
+}
+
+@media (max-width:767px){
+	.mainRight{
+		height:calc(100% - 50px);
+		width: 100%;
+	}
+}
+@media (min-width:991px){
+	footer{
+		height:90px;
+	}
+}
+@media (max-width:990px){
+	
+	.mainRight{
+		height:calc(100% - 120px);
+	}
+}
