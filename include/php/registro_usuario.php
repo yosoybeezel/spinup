@@ -3,6 +3,7 @@
 
 	require '../config/registro.php';
     if ($_SERVER['REQUEST_METHOD']=='POST') {
+        	
         $id_rol=$_POST['rol'];
         $id_mesa=$_POST['mesa'];
         $nombre=$_POST['nombre'];
@@ -15,14 +16,14 @@
         if ($result) {
             echo "<script language='JavaScript'>";
                 echo "alert('Usuario Registrado con Exito');";
-				header("Refresh:0; url=../home.php");
+				header("Refresh:0; url=../home.php?s=usuarios");
             echo "</script>";
         }else{
     		echo "<script language='JavaScript'>";
           	 	echo "alert('Falla al registrar usuario');";
     		echo "</script>";
 
-            header("Refresh: $sec; url=home.php");
+            header("Refresh: $sec; url=home.php?s=usuarios");
     	}
     }
 ?>

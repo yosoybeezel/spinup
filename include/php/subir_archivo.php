@@ -9,9 +9,17 @@
         $target_path = $target_path . $nombre_final; 
         if(move_uploaded_file($_FILES['archivo']['tmp_name'], $target_path)) {
             Registro::subirArchivo($id_evento,$archivo_sin_extension);
-            header("Refresh:0; url=../home.php");
+			echo "<script language='JavaScript'>";
+          	 	echo "alert('El archivo fue subido correctamente');";
+    		echo "</script>";
+			
+            
         } else{
-        echo "Ha ocurrido un error, trate de nuevo!";
+        	echo "<script language='JavaScript'>";
+          	 	echo "alert('Ocurró un error al subir el archivo');";
+    		echo "</script>";
+			
         }
+		header("Refresh:0; url=../home.php?s=repositorio");
     }
 ?>

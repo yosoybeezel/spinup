@@ -37,10 +37,10 @@
 			$result= Database::getInstance()->getDb()->prepare($sql);
 			return $result->execute(array($mesa));
 		}
-		public static function crearEvento($id_mesa,$evento,$fecha,$hora){
+		public static function crearEvento($id_mesa2,$evento,$fecha,$hora){
 			$sql="CALL sp_evento(?,?,?,?)";
 			$result= Database::getInstance()->getDb()->prepare($sql);
-			return $result->execute(array($id_mesa,$evento,$fecha,$hora));
+			return $result->execute(array($id_mesa2,$evento,$fecha,$hora));
 
 		}
 		public static function subirArchivo($id_evento,$archivo){

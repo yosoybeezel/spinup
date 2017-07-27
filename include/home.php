@@ -12,12 +12,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../css/normalize.css" />
-    <link rel="stylesheet" href="../css/bootstrap.css"/>
-    <link rel="stylesheet" href="../css/fileinput.min.css"/>
-    <link rel="stylesheet" href="../css/bootstrap-datepicker3.min.css"/>
     <link rel="stylesheet" href="../styles.css"/>
-    <link rel="stylesheet" href="../css/mediaQueries.css"/>
+    <script src="../js/jquery.js"></script>
+    
+    <script>
+    	$(document).ready(function() {
+	
+			$('.secciones').hide();
+			$('#<?php if(isset($_GET['s'])) { echo $_GET['s']; } else{ echo 'mesa'; } ; ?>').show();
+			
+	});
+	
+	
+    	
+    </script>
     
 </head>
 
@@ -62,36 +70,36 @@
                         <div class="form-group">
                             <label class="col-sm-2 control-label" for="id_cargo">Cargo:</label>
                                 <div class="col-sm-3">
-                                    <select class="selectpicker form-control" id="id_cargo" onchange="getCargoID()" required>
-                                        <option value="" selected disabled hidden>Seleccionar</option>
+                                    <select class="selectpicker form-control" id="id_cargo" name="rol" required>
+                                        <option value="" disabled hidden>Seleccionar</option>
                                             <?php
                                                 $result=Registro::obtenerRangos();
                                                 while($rangos=$result->fetch(PDO::FETCH_ASSOC)) {
                                                     $id=$rangos["id_rol"];
                                                     $opciones=$rangos["cargo"];
-                                                    echo "<option value='$id'>".$opciones."</option>";
+                                                    echo "<option value='".$id."'>".$opciones."</option>";
                                                 }
                                             ?>
                                      </select>
-                                    <input type="text" name="rol" hidden id="opc">
+                                    
                                 </div>
 
                                 <label class="col-sm-2 control-label" for="id_mesa">Mesa:</label>
                                 <div class="col-sm-3">
 
-                                    <select class="selectpicker form-control" id="id_mesa" onchange="getMesaID()" required>
-                                        <option value="" selected disabled hidden>Seleccionar</option>
+                                    <select class="selectpicker form-control" id="id_mesa" name="mesa" required>
+                                        <option value="" disabled hidden>Seleccionar</option>
                                             <?php
                                                 $result=Registro::obtenerMesas();
                                                 while($rangos=$result->fetch(PDO::FETCH_ASSOC)) {
                                                     $id=$rangos["id_mesa"];
                                                     $opciones=$rangos["nombre_mesa"];
 
-                                                    echo "<option value='$id'>".$opciones."</option>";
-                                                }
+                                                    echo "<option value='".$id."'>".$opciones."</option>";
+                                                }s
                                             ?>
                                     </select>
-                                    <input type="text" name="mesa" hidden id="opc2">
+                                    
                                 </div>
                         </div>
 
@@ -150,8 +158,8 @@
 
                                 <label class="col-sm-2 control-label" for="id_mesa2">Mesa:</label>
                                 <div class="col-sm-4">
-                                    <select class="selectpicker form-control" id="id_mesa2" onchange="get_MesaID()" required>
-                                          <option value="" selected disabled hidden>Seleccionar</option>
+                                    <select class="selectpicker form-control" id="id_mesa2" name="mesa_evento" required>
+                                          <option value="" disabled hidden>Seleccionar</option>
                                               <?php
                                                 $result=Registro::obtenerMesas();
                                                 while($rangos=$result->fetch(PDO::FETCH_ASSOC)) {
@@ -162,7 +170,7 @@
                                                 }
                                               ?>
                                     </select>
-                                    <input type="text" name="mesa_evento" hidden id="opc3">
+                                    <!-- <input type="text" name="mesa_evento" hidden id="opc3"> -->
                                 </div>
                             </div>
                             <div class="form-group">
@@ -199,7 +207,7 @@
                             <div class="form-group">
                                 <label class="col-sm-2 control-label" for="id_evento">Evento:</label>
                                 <div class="col-sm-10">
-                                    <select class="selectpicker form-control" id="id_evento" onchange="getEventoID()" required>
+                                    <select class="selectpicker form-control" id="id_evento" name="id_evento"  required>
                                       <option value="" selected disabled hidden>Seleccionar</option>
                                           <?php
                                             $result=Registro::obtenerEvento();
@@ -211,7 +219,7 @@
                                             }
                                           ?>
                                     </select>
-                                    <input type="text" name="id_evento" hidden id="opc4">
+                                    <!-- <input type="text" name="id_evento" hidden id="opc4"> -->
                                 </div>
                             </div>
 
@@ -236,12 +244,19 @@
 
 
     </div>
-
+	
     <script src="../js/jquery.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/bootstrap-datepicker.min.js"></script>
-    <script src="../js/fileinput.min.js"></script>
-    <script src="../js/funciones.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/bootstrap-datepicker.min.js"></script>
+	<script src="../js/fileinput.min.js"></script>
+	<script src="../js/funcionesHome.js"></script>
+	<!-- <script>
+		debugger;
+		$('#paginas').contents().find('.secciones').hide();
+		$('#paginas').contents().find('#mesa').show();
+		$('#btnMesa').click();
+	</script> -->
+	
 </body>
 
 </html>

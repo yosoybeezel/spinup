@@ -26,7 +26,7 @@ class Database{
     public function getDb(){
         if (self::$pdo == null) {
             self::$pdo = new PDO(
-                'mysql:dbname=' . DB_DATABASE .';host=' . DB_SERVER .';port:3306;',
+                'mysql:dbname=' . DB_DATABASE .';host=' . DB_SERVER .';port:40;',
                 DB_USER,
                 DB_PASSWORD,
                 array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8")

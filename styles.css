@@ -1,4 +1,7 @@
+@import url(css/normalize.css);
+@import url(css/bootstrap.css);
 @import url(css/home_forms.css);
 @import url(css/main.css);
 @import url(css/menu.css);
 @import url(css/style.css);
+@import url(css/mediaQueries.css);

@@ -5,10 +5,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 		<link rel="icon" type="image/png" href="../img/logo.png" />
-		<link rel="stylesheet" href="../css/normalize.css" />
-		<link rel="stylesheet" href="../css/bootstrap.css"/>
 		<link rel="stylesheet" href="../styles.css"/>
-		<link rel="stylesheet" href="../css/mediaQueries.css"/>
 
 		<title>Panel de Control</title>
 	</head>
@@ -28,7 +25,7 @@
 				<ul class="list">
 					<h5><strong>MESAS</strong></h5>
 					<li>
-						<a href="home.php#mesa" target="paginas">Crear mesa</a>
+						<a href="home.php#mesa" target="paginas" id="btnMesa">Crear mesa</a>
 					</li>
 					<li>
 						Modificar
@@ -37,7 +34,7 @@
 				<ul class="list">
 					<h5><strong>USUARIOS</strong></h5>
 					<li>
-						<a href="home.php#usuarios" target="paginas">Registrar</a>
+						<a href="home.php#usuarios" target="paginas" id="btnUsuarios">Registrar</a>
 					</li>
 					<li>
 						Modificar
@@ -46,13 +43,13 @@
 				<ul class="list">
 					<h5><strong>EVENTOS</strong></h5>
 					<li>
-						<a href="home.php#eventos" target="paginas">Crear Evento</a>
+						<a href="home.php#eventos" target="paginas" id="btnEventos">Crear Evento</a>
 					</li>
 					<li>
 						Modificar Evento
 					</li>
 					<li>
-						<a href="invitaciones.php" target="paginas">Invitaciones</a>
+						<a href="invitaciones.php" target="paginas" id="btnInvitaciones">Invitaciones</a>
 					</li>
 				</ul>
 				<ul class="list">
@@ -68,7 +65,7 @@
 		</div>
 		<div class="col-sm-12 col-sm-10 col-sm-offset-2 main-content mainRight">
 			<!-- <iframe class="principal" name="paginas" scrolling="no" src="home.php" frameborder="0" onload='resizeIframe(this)'></iframe> -->
-			<iframe class="principal" name="paginas" scrolling="no" src="home.php" frameborder="0"></iframe>
+			<iframe class="principal" name="paginas" scrolling="no" src="home.php" frameborder="0" id="paginas"></iframe>
 		</div>
 		<!--Footer-->
 		<footer>
@@ -87,19 +84,13 @@
 				</div>
 			</div>
 		</footer>
-		<script type="text/javascript">
-			$('.nav a').on('click', function() {
-				$('.btn-navbar').click();
-				//bootstrap 2.x
-				$('.navbar-toggle').click() //bootstrap 3.x by Richard
-			});
-			
-		</script>
 
 		<script src="../js/jquery.js"></script>
 		<script src="../js/bootstrap.min.js"></script>
+		<script src="../js/bootstrap-datepicker.min.js"></script>
+    	<script src="../js/fileinput.min.js"></script>
 		<script src="../js/funciones.js"></script>
-
+		
 	</body>
 
 </html>

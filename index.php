@@ -12,7 +12,7 @@
 
 <body class="main">
     <div class="container">
-        <div class="login-box col-md-4 ">
+        <div class="login-box col-xs-12 col-sm-6 col-md-4 ">
             <div class="login-logo">
                 <img src="img/logo.png" alt="Spin Up">
             </div>
@@ -28,7 +28,7 @@
                         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                     </div>
                     <div class="row">
-                        <div class="col-xs-4">
+                        <div class="col-xs-12">
                             <input type="submit" name="login" href="include/home.php" value="Ingresar" class="btn btn-primary btn-block btn-flat col-sm-3">
                         </div>
                     </div>

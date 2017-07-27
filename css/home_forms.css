@@ -1,7 +1,3 @@
-#mesa {
-    margin-top: 40px;
-}
-
 .registro_form {
     margin: 20px auto;
     border-bottom-right-radius: 1em;
@@ -24,14 +20,15 @@
 }
 
 .btn-accion {
-    background-color: #f47b0b;
-    color: #FFFFFF;
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
     float: right;
     bottom: 0;
 }
 
 .btn-accion:hover {
-    background-color: #ff5c00;
+    background-color: #265c89;
     color: #FFFFFF;
 }
 
@@ -56,14 +53,15 @@ legend {
     color: #FFFFFF;
     padding: 10px;
     border-top-left-radius: .5em;
+    font-size:1.2em;
 }
 
 .registro_form {
-    border: 1px solid #f54718;
+    border: 1px solid #fe890f;
 }
 
 footer {
-    background: #000000;
+    background: #0f0f0f;
     color: #FFFFFF;
     margin-bottom: 0;
 }
@@ -93,5 +91,8 @@ footer {
 }
 
 .social_media > a:hover {
-    color: #f54718;
+    color: #ff9500;
+}
+.hideMe{
+	display:none;
 }

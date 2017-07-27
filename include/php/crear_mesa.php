@@ -16,7 +16,7 @@
           	 	echo "alert('Falla al registrar usuario');";
     		echo "</script>";
 
-            header("Refresh: $sec; url=home.php");
+            //header("Refresh: $sec; url=home.php");
     	}
     }
 ?>
